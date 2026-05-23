@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página no encontrada — Panadería José">
+    <title>Página no encontrada — Panadería José</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        .error-404 {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .error-404__content {
+            max-width: 600px;
+        }
+
+        .error-404__icon {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .error-404__title {
+            font-family: var(--font-titular);
+            font-size: var(--fs-titulo);
+            color: var(--color-cafe);
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .error-404__description {
+            font-size: var(--fs-body);
+            color: var(--color-muted);
+            margin-bottom: 2rem;
+            line-height: 1.75;
+        }
+
+        .error-404__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-404__link {
+            display: inline-flex;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .error-404 {
+                padding: 1.5rem;
+            }
+
+            .error-404__icon {
+                font-size: 4rem;
+            }
+
+            .error-404__title {
+                font-size: clamp(1.75rem, 4vw, 2.5rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="error-404" role="main" aria-label="Página no encontrada">
+            <div class="error-404__content">
+                <span class="error-404__icon" aria-hidden="true">🥐</span>
+                <h1 class="error-404__title">Esta página no existe</h1>
+                <p class="error-404__description">
+                    Pero nuestro pan sí. Vuelve al inicio o revisa el menú para descubrir nuestros productos.
+                </p>
+                <div class="error-404__actions">
+                    <a href="/" class="btn btn--whatsapp error-404__link">
+                        <span aria-hidden="true">🏠</span>
+                        <span>Ir al inicio</span>
+                    </a>
+                    <a href="/menu" class="btn btn--whatsapp error-404__link">
+                        <span aria-hidden="true">🍞</span>
+                        <span>Ver el menú</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
