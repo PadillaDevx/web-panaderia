@@ -8,7 +8,7 @@ export const siteConfig = {
     /* ── Identidad ── */
     name: 'Panadería José',
     foundedYear: 1985,
-    logo: 'gallery/Logo.png',
+    logo: 'gallery/Logo.webp',
 
     /* ── Contacto (sin símbolos, en formato internacional) ── */
     whatsapp: {
