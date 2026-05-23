@@ -96,9 +96,9 @@ function renderFooter() {
     // Render social media icons
     const { instagram, facebook, tiktok } = siteConfig.social;
     const socials = [
-        { key: instagram, url: `https://www.instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram, ariaLabel: 'Visit our Instagram page' },
-        { key: facebook, url: `https://www.facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook, ariaLabel: 'Visit our Facebook page' },
-        { key: tiktok, url: `https://www.tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok, ariaLabel: 'Visit our TikTok page' },
+        { key: instagram, url: `https://www.instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram, ariaLabel: 'Visita nuestra página de Instagram' },
+        { key: facebook, url: `https://www.facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook, ariaLabel: 'Visita nuestra página de Facebook' },
+        { key: tiktok, url: `https://www.tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok, ariaLabel: 'Visita nuestra página de TikTok' },
     ].filter(s => s.key);
 
     const socialsContainer = $('[data-footer-socials]');
