@@ -1,6 +1,6 @@
 /* home.js — Landing principal. Orquesta la inyección desde site-config. */
 
-import { $, $$, el, observeAnimations } from '../utils/dom.js';
+import { $, $$, el, picture, observeAnimations } from '../utils/dom.js';
 import { whatsappUrl, currentYear, titleWithEm } from '../utils/helpers.js';
 import { siteConfig } from '../data/site-config.js';
 import { featuredProducts } from '../data/featured-products.js';
@@ -46,7 +46,12 @@ function renderAbout() {
     const a = siteConfig.about;
     const media = $('[data-about-media]');
     media.insertBefore(
-        el('img', { src: a.image.src, alt: a.image.alt, loading: 'lazy' }),
+        picture(a.image.src, {
+            alt: a.image.alt,
+            loading: 'lazy',
+            width: a.image.width || 900,
+            height: a.image.height || 700,
+        }),
         media.firstChild,
     );
     a.phrases.forEach(p => $('[data-about-phrases]').appendChild(el('p', { class: 'about__phrase' }, [p])));

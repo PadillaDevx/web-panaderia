@@ -47,6 +47,36 @@ export function clear(node) {
 }
 
 /**
+ * Crea un elemento `<picture>` con fuente WebP y fallback JPEG.
+ *
+ * Si `src` termina en `.webp`, se añade un `<source type="image/webp">`
+ * con esa ruta y el `<img>` usa la ruta `.jpeg` equivalente como fallback
+ * (los navegadores con soporte WebP usarán el `<source>`; los demás, el `<img>`).
+ *
+ * **Requisito**: cada imagen `.webp` en `gallery/` debe tener su `.jpeg`
+ * homólogo con el mismo nombre base para que el fallback funcione.
+ *
+ * @param {string} src          - Ruta a la imagen WebP (u otro formato si no es WebP)
+ * @param {object} [attrs={}]   - Atributos para el `<img>` interior (alt, loading, width, height…)
+ * @returns {HTMLPictureElement}
+ */
+export function picture(src, attrs = {}) {
+    const picEl = document.createElement('picture');
+
+    if (src.endsWith('.webp')) {
+        const source = document.createElement('source');
+        source.srcset = src;
+        source.type = 'image/webp';
+        picEl.appendChild(source);
+    }
+
+    const fallbackSrc = src.endsWith('.webp') ? src.replace(/\.webp$/, '.jpeg') : src;
+    picEl.appendChild(el('img', { src: fallbackSrc, ...attrs }));
+
+    return picEl;
+}
+
+/**
  * Activa animaciones de entrada para todos los elementos con [data-animate].
  * Cada elemento se anima una sola vez al entrar en pantalla.
  */

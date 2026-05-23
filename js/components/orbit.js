@@ -2,7 +2,7 @@
  * orbit.js — Renderiza el collage circular del hero.
  */
 
-import { el, clear } from '../utils/dom.js';
+import { el, clear, picture } from '../utils/dom.js';
 
 /**
  * @param {HTMLElement} container - elemento .orbit vacío
@@ -17,7 +17,12 @@ export function renderOrbit(container, data) {
     /* Imagen central */
     container.appendChild(
         el('div', { class: 'orbit__center' }, [
-            el('img', { src: data.center.src, alt: data.center.alt, loading: 'eager' }),
+            picture(data.center.src, {
+                alt: data.center.alt,
+                loading: 'eager',
+                width: data.center.width || 600,
+                height: data.center.height || 600,
+            }),
         ]),
     );
 
@@ -25,7 +30,12 @@ export function renderOrbit(container, data) {
     data.satellites.forEach((sat, i) => {
         container.appendChild(
             el('div', { class: `orbit__satellite orbit__satellite--${i + 1}` }, [
-                el('img', { src: sat.src, alt: sat.alt, loading: 'lazy' }),
+                picture(sat.src, {
+                    alt: sat.alt,
+                    loading: 'lazy',
+                    width: sat.width || 300,
+                    height: sat.height || 300,
+                }),
             ]),
         );
     });
