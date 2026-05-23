@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Patrón de puntos dorados muy sutiles usado como textura en el panel oscuro del hero -->
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+  <circle cx="1" cy="1" r="1" fill="rgba(201,150,42,0.08)"/>
+</svg>

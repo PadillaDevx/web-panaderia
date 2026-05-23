@@ -1,0 +1,323 @@
+/* Estilos específicos de la landing principal (home) */
+
+
+/* ════════════════════════════════════════════════════════════════
+   BRANDING integrado en el hero — logo + nombre encima del titular
+   ════════════════════════════════════════════════════════════════ */
+
+.hero__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    /* acerca el bloque de branding al badge/título siguiente */
+    margin-bottom: calc(-1.875rem + 0.625rem);
+}
+
+.hero__brand-logo {
+    height: 76px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55));
+}
+
+.hero__brand-name {
+    font-family: var(--font-titular);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    letter-spacing: 0.14em;
+    color: var(--color-dorado-cl);
+    line-height: 1;
+    white-space: nowrap;
+    user-select: none;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   HERO — split diagonal: panel oscuro + collage orbital
+   ════════════════════════════════════════════════════════════════ */
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__left {
+    background: var(--color-cafe);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 4.5rem 5rem 5rem;
+    gap: 1.875rem;
+    position: relative;
+    z-index: 2;
+    /* Corte diagonal característico */
+    clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+}
+
+/* Textura puntillada de fondo (SVG externo) */
+.hero__left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../../assets/icons/dot-pattern.svg') repeat;
+    pointer-events: none;
+}
+
+.hero__title {
+    font-family: var(--font-titular);
+    font-size: var(--fs-hero);
+    line-height: 1.0;
+    color: var(--color-crema);
+}
+
+.hero__title em {
+    font-style: italic;
+    color: var(--color-dorado-cl);
+    display: block;
+}
+
+.hero__divider {
+    width: 56px;
+    height: 2px;
+    background: var(--color-dorado);
+}
+
+.hero__subtitle {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: rgba(250, 244, 232, 0.55);
+    line-height: 1.85;
+    max-width: 380px;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.hero__right {
+    position: relative;
+    background: var(--color-crema-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Halo circular muy sutil de fondo */
+.hero__right::before {
+    content: '';
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: var(--color-cafe-2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   NOSOTROS — imagen con frases + panel de texto
+   ════════════════════════════════════════════════════════════════ */
+.about {
+    min-height: 560px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about__media {
+    position: relative;
+    overflow: hidden;
+}
+
+.about__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.72) saturate(1.1);
+}
+
+/* Degradado diagonal hacia el panel derecho */
+.about__media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 40%, var(--color-crema-2) 90%);
+}
+
+.about__phrases {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 3;
+}
+
+.about__phrase {
+    background: rgba(28, 10, 0, 0.88);
+    backdrop-filter: blur(4px);
+    color: var(--color-dorado-cl);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.625rem 1.5rem;
+    border-top: 1px solid rgba(184, 114, 10, 0.2);
+}
+
+.about__content {
+    background: var(--color-crema-2);
+    padding: 4.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.375rem;
+}
+
+.about__title {
+    font-family: var(--font-titular);
+    font-size: var(--fs-sub);
+    color: var(--color-cafe);
+    line-height: 1.05;
+}
+
+.about__quote {
+    border-left: 2px solid var(--color-dorado);
+    padding-left: 1rem;
+    font-family: var(--font-titular);
+    font-size: 1.1875rem;
+    font-style: italic;
+    color: var(--color-cafe-2);
+    line-height: 1.65;
+    opacity: 0.75;
+}
+
+.about__text {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.85;
+    font-weight: 300;
+}
+
+.about__signature {
+    font-size: var(--fs-micro);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-dorado);
+    font-weight: 500;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   CONTACTO
+   ════════════════════════════════════════════════════════════════ */
+.contact {
+    padding: var(--pad-seccion);
+    background: var(--color-cafe);
+}
+
+.contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.contact__title {
+    font-family: var(--font-titular);
+    font-size: var(--fs-titulo);
+    color: var(--color-crema);
+    line-height: 1.05;
+}
+
+.contact__title em {
+    color: var(--color-dorado-cl);
+}
+
+.contact__subtitle {
+    font-size: 0.875rem;
+    color: rgba(250, 244, 232, 0.45);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.contact__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.contact__rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════════════════════════════ */
+.footer {
+    background: var(--color-cafe-2);
+    border-top: 1px solid rgba(184, 114, 10, 0.1);
+    padding: 1.25rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__brand {
+    font-family: var(--font-titular);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--color-dorado-cl);
+}
+
+.footer__meta {
+    font-size: var(--fs-micro);
+    color: rgba(184, 114, 10, 0.3);
+    letter-spacing: 2px;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   RESPONSIVE — ≤ 900px
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .hero__brand-logo {
+        height: 56px;
+    }
+
+    .hero__brand-name {
+        font-size: 0.875rem;
+    }
+
+    .hero__left {
+        clip-path: none;
+        padding: 6.25rem 1.5rem 3.5rem;
+    }
+
+    .hero__right {
+        min-height: 400px;
+    }
+
+    .about__media {
+        min-height: 280px;
+    }
+
+    .about__content {
+        padding: 2.75rem 1.5rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 1.125rem;
+    }
+}

@@ -1,0 +1,5 @@
+/* main.css — Punto de entrada. Orden: base → app → páginas */
+@import url('./base.css');
+@import url('./app.css');
+@import url('./pages/home.css');
+@import url('./pages/menu.css');

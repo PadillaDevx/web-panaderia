@@ -1,0 +1,328 @@
+/* Estilos específicos de la página /menu/ */
+
+
+/* ════════════════════════════════════════════════════════════════
+   HEADER DEL MENÚ
+   ════════════════════════════════════════════════════════════════ */
+.menu-header {
+    background: var(--color-cafe);
+    color: var(--color-crema);
+    padding: 5rem 1.5rem 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.menu-header__brand {
+    font-family: var(--font-titular);
+    font-style: italic;
+    font-size: 1.125rem;
+    color: var(--color-dorado-cl);
+    margin-bottom: 0.75rem;
+}
+
+.menu-header__title {
+    font-family: var(--font-titular);
+    font-size: var(--fs-titulo);
+    color: var(--color-crema);
+    margin-bottom: 0.75rem;
+}
+
+.menu-header__title em {
+    color: var(--color-dorado-cl);
+}
+
+.menu-header__subtitle {
+    color: rgba(250, 244, 232, 0.55);
+    max-width: 540px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.menu-header__back {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: var(--fs-small);
+    color: rgba(250, 244, 232, 0.6);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color var(--dur);
+}
+
+.menu-header__back:hover {
+    color: var(--color-dorado-cl);
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   CONTENIDO DEL MENÚ
+   ════════════════════════════════════════════════════════════════ */
+.menu {
+    padding: 4rem 1.5rem 6rem;
+    background: var(--color-crema);
+}
+
+.menu__wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ── Sticky tabs de categorías ── */
+.menu__tabs {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-overlay);
+    background: var(--color-crema);
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-crema-3);
+    margin-bottom: -2rem;
+}
+
+.menu__tab {
+    font-size: var(--fs-small);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--dur);
+}
+
+.menu__tab:hover {
+    color: var(--color-dorado);
+}
+
+.menu__tab.is-active {
+    color: var(--color-cafe);
+    background: var(--color-crema-2);
+    border-color: var(--color-dorado);
+}
+
+
+/* ── Categoría ── */
+.menu-category {
+    scroll-margin-top: 100px;
+    /* compensa la sticky tab */
+}
+
+.menu-category__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.menu-category__title {
+    font-family: var(--font-titular);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    color: var(--color-cafe);
+    font-style: italic;
+}
+
+/* Subtítulo opcional debajo del título (ej. "TODAS A $45...") */
+.menu-category__subtitle {
+    font-size: var(--fs-small);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-top: 0.375rem;
+}
+
+.menu-category__bar {
+    width: 48px;
+    height: 2px;
+    background: var(--color-dorado);
+    margin: 0.75rem auto 0;
+}
+
+.menu-category__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   LISTA DE ÍTEMS — base compartida por todos los layouts
+   ════════════════════════════════════════════════════════════════ */
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list__item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--color-crema-3);
+}
+
+.menu-list__item:last-child {
+    border-bottom: none;
+}
+
+.menu-list__name {
+    color: var(--color-texto);
+    font-size: var(--fs-body);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.menu-list__price {
+    color: var(--color-dorado);
+    font-weight: 500;
+    font-size: var(--fs-body);
+    white-space: nowrap;
+}
+
+/* Contenedor de dos precios (ej. Chico / Grande) */
+.menu-list__prices {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.menu-list__prices .menu-list__price {
+    min-width: 2.75rem;
+    text-align: right;
+}
+
+/* Badge ESPECIAL */
+.menu-list__tag {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    background: var(--color-dorado);
+    color: #fff;
+    font-size: var(--fs-micro);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    vertical-align: middle;
+    line-height: 1.6;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   LAYOUT: DOS COLUMNAS
+   ════════════════════════════════════════════════════════════════ */
+
+.menu-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+    border-top: 1px solid var(--color-crema-3);
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .menu-two-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   LAYOUT: DOBLE GRUPO (con cabeceras de sub-grupo)
+   ════════════════════════════════════════════════════════════════ */
+
+.menu-double-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+    border-top: 1px solid var(--color-crema-3);
+    padding-top: 1.25rem;
+}
+
+@media (max-width: 640px) {
+    .menu-double-group {
+        grid-template-columns: 1fr;
+        gap: 2rem 0;
+    }
+}
+
+.menu-group__name {
+    font-weight: 600;
+    color: var(--color-cafe);
+    font-size: var(--fs-body);
+    margin-bottom: 0.25rem;
+}
+
+.menu-group__note {
+    font-style: italic;
+    font-size: var(--fs-small);
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* Cabeceras de talla alineadas a la derecha sobre las columnas de precio */
+.menu-group__sizes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.125rem;
+}
+
+.menu-group__sizes span {
+    min-width: 2.75rem;
+    text-align: right;
+}
+
+
+/* ── Estados de carga / error ── */
+.menu__loading,
+.menu__error {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.menu__error {
+    color: #b00020;
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   CTA FLOTANTE DE WHATSAPP
+   ════════════════════════════════════════════════════════════════ */
+.menu-fab {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: var(--z-nav);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-whatsapp);
+    color: #fff;
+    padding: 0.875rem 1.25rem;
+    border-radius: var(--radius-pill);
+    font-size: var(--fs-small);
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--dur);
+}
+
+.menu-fab:hover {
+    transform: translateY(-3px);
+}

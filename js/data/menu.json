@@ -1,0 +1,197 @@
+{
+    "categories": [
+        {
+            "name": "Bebidas calientes",
+            "layout": "double-group",
+            "groups": [
+                {
+                    "name": "Café de grano",
+                    "sizes": [
+                        "Chico",
+                        "Grande"
+                    ],
+                    "items": [
+                        {
+                            "name": "Latte / Capuchino",
+                            "prices": [
+                                35,
+                                40
+                            ]
+                        },
+                        {
+                            "name": "Americano",
+                            "prices": [
+                                30,
+                                35
+                            ]
+                        },
+                        {
+                            "name": "Moka",
+                            "prices": [
+                                40,
+                                45
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Café de mi abuelita",
+                    "note": "Con adición de:",
+                    "items": [
+                        {
+                            "name": "Calúa",
+                            "price": 10,
+                            "addon": true
+                        },
+                        {
+                            "name": "Rompope",
+                            "price": 10,
+                            "addon": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Frapes",
+            "layout": "two-column",
+            "items": [
+                {
+                    "name": "Moka",
+                    "price": 45
+                },
+                {
+                    "name": "Taro",
+                    "price": 45
+                },
+                {
+                    "name": "Fresa",
+                    "price": 45
+                },
+                {
+                    "name": "Capuchino",
+                    "price": 45
+                },
+                {
+                    "name": "Chai vainilla",
+                    "price": 55,
+                    "tag": "ESPECIAL"
+                },
+                {
+                    "name": "Chocolate",
+                    "price": 50
+                },
+                {
+                    "name": "Cajeta",
+                    "price": 45
+                },
+                {
+                    "name": "Café",
+                    "price": 45
+                },
+                {
+                    "name": "Mazapán",
+                    "price": 45
+                },
+                {
+                    "name": "Galleta",
+                    "price": 45
+                },
+                {
+                    "name": "Chai especias",
+                    "price": 55,
+                    "tag": "ESPECIAL"
+                },
+                {
+                    "name": "Matcha",
+                    "price": 50
+                }
+            ]
+        },
+        {
+            "name": "Bebidas endulzadas",
+            "layout": "two-column",
+            "subtitle": "TODAS A $45 · CHOCOLATE ABUELITA $50",
+            "items": [
+                {
+                    "name": "Chocolate abuelita",
+                    "price": 50
+                },
+                {
+                    "name": "Matcha",
+                    "price": 45
+                },
+                {
+                    "name": "Café",
+                    "price": 45
+                },
+                {
+                    "name": "Chocolate",
+                    "price": 45
+                },
+                {
+                    "name": "Galleta",
+                    "price": 45
+                },
+                {
+                    "name": "Chai especias",
+                    "price": 45
+                },
+                {
+                    "name": "Cajeta",
+                    "price": 45
+                },
+                {
+                    "name": "Moka",
+                    "price": 45
+                },
+                {
+                    "name": "Taro",
+                    "price": 45
+                },
+                {
+                    "name": "Fresa",
+                    "price": 45
+                },
+                {
+                    "name": "Capuchino",
+                    "price": 45
+                },
+                {
+                    "name": "Chai vainilla",
+                    "price": 45
+                },
+                {
+                    "name": "Mazapán",
+                    "price": 45
+                }
+            ]
+        },
+        {
+            "name": "Toppings",
+            "layout": "single-column",
+            "items": [
+                {
+                    "name": "Crema batida",
+                    "price": 10
+                },
+                {
+                    "name": "Lunetas",
+                    "price": 5
+                },
+                {
+                    "name": "Chispas de chocolate",
+                    "price": 3
+                },
+                {
+                    "name": "Sprinkles de colores",
+                    "price": 3
+                },
+                {
+                    "name": "Sprinkles de café",
+                    "price": 5
+                }
+            ]
+        }
+    ]
+}

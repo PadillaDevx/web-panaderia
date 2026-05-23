@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Carta y precios de Panadería José. Pan dulce, pan salado, pastelería y bebidas artesanales.">
+    <title>Menú — Panadería José</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════════════════════════
+       HEADER
+       ════════════════════════════════════════════════════════════ -->
+    <header class="menu-header" role="banner">
+        <a href="../" class="menu-header__back" data-menu-back>← Volver</a>
+        <p class="menu-header__brand" data-menu-brand></p>
+        <h1 class="menu-header__title" data-menu-title></h1>
+        <p class="menu-header__subtitle" data-menu-subtitle></p>
+    </header>
+
+    <!-- ════════════════════════════════════════════════════════════
+       MENÚ — se renderiza dinámicamente desde menu.json
+       ════════════════════════════════════════════════════════════ -->
+    <main class="menu">
+        <div class="menu__wrapper">
+
+            <nav class="menu__tabs" data-menu-tabs aria-label="Categorías del menú"></nav>
+
+            <div data-menu-content>
+                <p class="menu__loading">Cargando menú…</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CTA flotante de WhatsApp -->
+    <a class="menu-fab" data-menu-fab href="#" aria-label="Ordenar por WhatsApp"></a>
+
+    <noscript>
+        <p style="text-align:center;padding:2rem;">
+            Habilita JavaScript para ver el menú.
+        </p>
+    </noscript>
+
+    <script type="module" src="../js/pages/menu.js"></script>
+
+</body>
+
+</html>
