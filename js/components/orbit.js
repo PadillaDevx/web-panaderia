@@ -17,7 +17,7 @@ export function renderOrbit(container, data) {
     /* Imagen central */
     container.appendChild(
         el('div', { class: 'orbit__center' }, [
-            el('img', { src: data.center.src, alt: data.center.alt, loading: 'lazy' }),
+            el('img', { src: data.center.src, alt: data.center.alt, loading: 'eager' }),
         ]),
     );
 
