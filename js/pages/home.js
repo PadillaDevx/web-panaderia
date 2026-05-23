@@ -92,6 +92,28 @@ function renderFooter() {
     $('[data-footer-brand]').textContent = siteConfig.name;
     $('[data-footer-meta]').textContent =
         `© ${currentYear()} ${siteConfig.name} · Todos los derechos reservados`;
+
+    // Render social media icons
+    const { instagram, facebook, tiktok } = siteConfig.social;
+    const socials = [
+        { key: instagram, url: `https://instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram },
+        { key: facebook, url: `https://facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook },
+        { key: tiktok, url: `https://tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok },
+    ].filter(s => s.key);
+
+    const socialsContainer = $('[data-footer-socials]');
+    if (socials.length > 0) {
+        socials.forEach(social => {
+            socialsContainer.appendChild(el('a', {
+                href: social.url,
+                class: 'footer__social-link',
+                target: '_blank',
+                rel: 'noopener noreferrer',
+                title: social.label,
+                html: social.icon,
+            }));
+        });
+    }
 }
 
 /* Init */
