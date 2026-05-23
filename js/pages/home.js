@@ -94,6 +94,8 @@ function renderFooter() {
         `© ${currentYear()} ${siteConfig.name} · Todos los derechos reservados`;
 
     // Render social media icons
+    if (!siteConfig.social) return;
+
     const { instagram, facebook, tiktok } = siteConfig.social;
     const socials = [
         { key: instagram, url: `https://www.instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram, ariaLabel: 'Visita nuestra página de Instagram' },
