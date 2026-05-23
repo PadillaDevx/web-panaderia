@@ -48,13 +48,13 @@ export const siteConfig = {
         ctaPrimary: 'Ordenar por WhatsApp',
         ctaSecondary: { label: 'Ver nuestro trabajo', href: '#galeria' },
         collage: {
-            center: { src: 'gallery/Foto 4.jpeg', alt: 'Galletas de chocolate con sprinkles' },
+            center: { src: 'gallery/Foto 4.webp', alt: 'Galletas de chocolate con sprinkles', width: 600, height: 600 },
             satellites: [
-                { src: 'gallery/Foto 14.jpeg', alt: 'Concha de chocolate' },
-                { src: 'gallery/Foto 1.jpeg', alt: 'Conchas de fresa' },
-                { src: 'gallery/Foto 5.jpeg', alt: 'Orejas de hojaldre recién horneadas' },
-                { src: 'gallery/Foto 2.jpeg', alt: 'Trenzas de canela y azúcar' },
-                { src: 'gallery/Foto 7.jpeg', alt: 'Bolillos artesanales' },
+                { src: 'gallery/Foto 14.webp', alt: 'Concha de chocolate', width: 300, height: 300 },
+                { src: 'gallery/Foto 1.webp', alt: 'Conchas de fresa', width: 300, height: 300 },
+                { src: 'gallery/Foto 5.webp', alt: 'Orejas de hojaldre recién horneadas', width: 300, height: 300 },
+                { src: 'gallery/Foto 2.webp', alt: 'Trenzas de canela y azúcar', width: 300, height: 300 },
+                { src: 'gallery/Foto 7.webp', alt: 'Bolillos artesanales', width: 300, height: 300 },
             ],
         },
     },
@@ -78,7 +78,7 @@ export const siteConfig = {
         quote: '"El pan no es sólo alimento, es el lenguaje universal de la hospitalidad."',
         text: 'Desde 1985, la familia José ha horneado con las mismas manos y el mismo corazón. Cada madrugada encendemos el horno para que tengas el pan más fresco en tu mesa.',
         signature: '— José Martínez, fundador',
-        image: { src: 'gallery/Panaderia.jpeg', alt: 'Interior de Panadería José con sus anaqueles llenos de pan' },
+        image: { src: 'gallery/Panaderia.webp', alt: 'Interior de Panadería José con sus anaqueles llenos de pan', width: 900, height: 700 },
         phrases: [
             'Más de tres décadas de tradición',
             'Horneado sin conservadores',

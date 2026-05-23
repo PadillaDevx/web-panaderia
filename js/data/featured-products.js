@@ -8,10 +8,10 @@
  */
 
 export const featuredProducts = [
-    { name: 'Muffins de Chocolate', type: 'Pan Dulce', image: 'gallery/Foto 9.jpeg', mods: ['tall'] },
-    { name: 'Pan Integral', type: 'Con Semillas', image: 'gallery/Foto 3.jpeg', mods: [] },
-    { name: 'Donas Glaseadas', type: 'Artesanal', image: 'gallery/Foto 13.jpeg', mods: [] },
-    { name: 'Galletas de Avena', type: 'Con Granola', image: 'gallery/Foto 6.jpeg', mods: ['wide'] },
-    { name: 'Roles de Azúcar', type: 'Pan Dulce', image: 'gallery/Foto 8.jpeg', mods: [] },
-    { name: 'Cuernitos', type: 'Hojaldrado', image: 'gallery/Foto 10.jpeg', mods: ['featured'] },
+    { name: 'Muffins de Chocolate', type: 'Pan Dulce', image: 'gallery/Foto 9.webp', mods: ['tall'] },
+    { name: 'Pan Integral', type: 'Con Semillas', image: 'gallery/Foto 3.webp', mods: [] },
+    { name: 'Donas Glaseadas', type: 'Artesanal', image: 'gallery/Foto 13.webp', mods: [] },
+    { name: 'Galletas de Avena', type: 'Con Granola', image: 'gallery/Foto 6.webp', mods: ['wide'] },
+    { name: 'Roles de Azúcar', type: 'Pan Dulce', image: 'gallery/Foto 8.webp', mods: [] },
+    { name: 'Cuernitos', type: 'Hojaldrado', image: 'gallery/Foto 10.webp', mods: ['featured'] },
 ];
