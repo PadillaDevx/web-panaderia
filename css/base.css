@@ -164,6 +164,27 @@ h3 em {
     border: 0;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-dorado);
+    color: var(--color-crema);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: var(--radius-md);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-dorado);
+    outline-offset: 3px;
+}
+
 [data-animate] {
     opacity: 0;
     transform: translateY(24px);
