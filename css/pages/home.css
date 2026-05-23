@@ -284,6 +284,30 @@
     letter-spacing: 2px;
 }
 
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(184, 114, 10, 0.6);
+    transition: color 0.2s ease;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
+    color: var(--color-dorado-cl);
+}
+
+.footer__social-link svg {
+    width: 24px;
+    height: 24px;
+}
+
 
 /* ════════════════════════════════════════════════════════════════
    RESPONSIVE — ≤ 900px

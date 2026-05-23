@@ -92,6 +92,31 @@ function renderFooter() {
     $('[data-footer-brand]').textContent = siteConfig.name;
     $('[data-footer-meta]').textContent =
         `© ${currentYear()} ${siteConfig.name} · Todos los derechos reservados`;
+
+    // Render social media icons
+    if (!siteConfig.social) return;
+
+    const { instagram, facebook, tiktok } = siteConfig.social;
+    const socials = [
+        { key: instagram, url: `https://www.instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram, ariaLabel: 'Visita nuestra página de Instagram' },
+        { key: facebook, url: `https://www.facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook, ariaLabel: 'Visita nuestra página de Facebook' },
+        { key: tiktok, url: `https://www.tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok, ariaLabel: 'Visita nuestra página de TikTok' },
+    ].filter(s => s.key);
+
+    const socialsContainer = $('[data-footer-socials]');
+    if (socials.length > 0) {
+        socials.forEach(social => {
+            socialsContainer.appendChild(el('a', {
+                href: social.url,
+                class: 'footer__social-link',
+                target: '_blank',
+                rel: 'noopener noreferrer',
+                title: social.label,
+                'aria-label': social.ariaLabel,
+                html: social.icon,
+            }));
+        });
+    }
 }
 
 /* Init */
