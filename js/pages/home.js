@@ -96,9 +96,9 @@ function renderFooter() {
     // Render social media icons
     const { instagram, facebook, tiktok } = siteConfig.social;
     const socials = [
-        { key: instagram, url: `https://instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram },
-        { key: facebook, url: `https://facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook },
-        { key: tiktok, url: `https://tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok },
+        { key: instagram, url: `https://www.instagram.com/${instagram}`, label: 'Instagram', icon: icons.instagram, ariaLabel: 'Visit our Instagram page' },
+        { key: facebook, url: `https://www.facebook.com/${facebook}`, label: 'Facebook', icon: icons.facebook, ariaLabel: 'Visit our Facebook page' },
+        { key: tiktok, url: `https://www.tiktok.com/@${tiktok}`, label: 'TikTok', icon: icons.tiktok, ariaLabel: 'Visit our TikTok page' },
     ].filter(s => s.key);
 
     const socialsContainer = $('[data-footer-socials]');
@@ -110,6 +110,7 @@ function renderFooter() {
                 target: '_blank',
                 rel: 'noopener noreferrer',
                 title: social.label,
+                'aria-label': social.ariaLabel,
                 html: social.icon,
             }));
         });
