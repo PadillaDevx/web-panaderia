@@ -62,10 +62,10 @@ function renderAbout() {
     $('[data-about-signature]').textContent = a.signature;
 }
 
-/* Da formato legible a un número mexicano: "524751025717" → "+52 4751025717" */
+/* Da formato legible a un número mexicano: "524751025717" → "+52 (475) 102 57 17" */
 function formatMxPhone(raw) {
     const digits = String(raw).replace(/\D/g, '');
-    return `+${digits.slice(0, 2)} ${digits.slice(2)}`;
+    return `+${digits.slice(0, 2)} (${digits.slice(2, 5)}) ${digits.slice(5, 8)} ${digits.slice(8, 10)} ${digits.slice(10)}`;
 }
 
 /* Contacto */
