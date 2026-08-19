@@ -12,12 +12,20 @@ export const siteConfig = {
 
     /* ── Contacto (sin símbolos, en formato internacional) ── */
     whatsapp: {
-        phone: '521XXXXXXXXXX',
+        phone: '5214751025717',
         message: 'Hola, me gustaría hacer un pedido',
     },
 
-    address: 'Calle Principal #123, Col. Centro',
-    schedule: 'Lun – Sáb: 7:00 am – 8:00 pm',
+    address: 'Hermenegildo Galeana #38',
+
+    /* ── Coordenadas y mapa (Google Maps embed) ── */
+    mapEmbedUrl: 'https://maps.google.com/maps?q=Hermenegildo+Galeana+%2338&output=embed',
+    mapDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Hermenegildo+Galeana+%2338',
+
+    schedule: [
+        { label: 'Lunes a Sábado', value: '7:00 am – 10:00 pm' },
+        { label: 'Domingos',       value: '10:00 am – 10:00 pm' },
+    ],
 
     /* ── Rutas internas ── */
     routes: {

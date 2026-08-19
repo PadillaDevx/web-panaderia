@@ -40,18 +40,27 @@
         "name": "Panadería José",
         "description": "Panadería artesanal con pan recién horneado y recetas tradicionales desde 1985.",
         "url": "https://panaderiajose.com",
-        "telephone": "+52 1XXXXXXXXXX",
+        "telephone": "+52 1 475 102 5717",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Calle Principal #123, Col. Centro",
+            "streetAddress": "Hermenegildo Galeana #38",
             "addressCountry": "MX"
         },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "07:00",
-            "closes": "20:00"
-        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "07:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "22:00"
+            }
+        ],
+        "hasMap": "https://www.google.com/maps?q=Hermenegildo+Galeana+%2338",
         "image": "https://panaderiajose.com/gallery/Panaderia.jpeg",
         "foundingDate": "1985",
         "priceRange": "$$"
@@ -149,6 +158,7 @@
             <div class="contact__right">
                 <a class="btn btn--whatsapp btn--lg" data-contact-cta href="#"></a>
                 <div class="contact__rows" data-contact-rows></div>
+                <div class="contact__map" data-contact-map aria-label="Ubicación en Google Maps"></div>
             </div>
 
         </section>

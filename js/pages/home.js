@@ -62,7 +62,27 @@ function renderAbout() {
     $('[data-about-signature]').textContent = a.signature;
 }
 
+/* Da formato legible a un número mexicano: "5214751025717" → "+52 1 475 102 5717" */
+function formatMxPhone(raw) {
+    const digits = String(raw).replace(/\D/g, '');
+    const m = digits.match(/^(52)(\d{1})(\d{3})(\d{3})(\d{4})$/);
+    if (m) return `+${m[1]} ${m[2]} ${m[3]} ${m[4]} ${m[5]}`;
+    return `+${digits}`;
+}
+
 /* Contacto */
+function buildContactRow(icon, items) {
+    return el('div', { class: 'contact-row' }, [
+        el('span', { class: 'contact-row__icon', html: icon }),
+        el('div', { class: 'contact-row__body' }, items.map(({ label, value }) => (
+            el('div', { class: 'contact-row__item' }, [
+                el('p', { class: 'contact-row__label' }, [label]),
+                el('p', { class: 'contact-row__value' }, [value]),
+            ])
+        ))),
+    ]);
+}
+
 function renderContact() {
     const c = siteConfig.contact;
     const wa = whatsappUrl(siteConfig.whatsapp.phone, siteConfig.whatsapp.message);
@@ -75,21 +95,55 @@ function renderContact() {
     cta.href = wa;
     cta.innerHTML = `${icons.whatsapp} ${c.cta}`;
 
-    const rows = [
-        { icon: icons.pin,   label: 'Dirección', value: siteConfig.address },
-        { icon: icons.clock, label: 'Horario',   value: siteConfig.schedule },
-        { icon: icons.phone, label: 'WhatsApp',  value: `+${siteConfig.whatsapp.phone}` },
-    ];
     const rowsEl = $('[data-contact-rows]');
-    rows.forEach(row => {
-        rowsEl.appendChild(el('div', { class: 'contact-row' }, [
-            el('span', { class: 'contact-row__icon', html: row.icon }),
-            el('div', {}, [
-                el('p', { class: 'contact-row__label' }, [row.label]),
-                el('p', { class: 'contact-row__value' }, [row.value]),
+
+    rowsEl.appendChild(buildContactRow(icons.pin, [
+        { label: 'Dirección', value: siteConfig.address },
+    ]));
+
+    const schedule = Array.isArray(siteConfig.schedule)
+        ? siteConfig.schedule
+        : [{ label: 'Horario', value: siteConfig.schedule }];
+    rowsEl.appendChild(buildContactRow(icons.clock, schedule));
+
+    const phonePretty = formatMxPhone(siteConfig.whatsapp.phone);
+    const phoneRow = el('a', {
+        class: 'contact-row contact-row--link',
+        href: wa,
+        'aria-label': 'Contactar por WhatsApp',
+    }, [
+        el('span', { class: 'contact-row__icon', html: icons.phone }),
+        el('div', { class: 'contact-row__body' }, [
+            el('div', { class: 'contact-row__item' }, [
+                el('p', { class: 'contact-row__label' }, ['WhatsApp']),
+                el('p', { class: 'contact-row__value' }, [phonePretty]),
             ]),
-        ]));
-    });
+        ]),
+    ]);
+    rowsEl.appendChild(phoneRow);
+
+    const map = $('[data-contact-map]');
+    if (map && siteConfig.mapEmbedUrl) {
+        const iframe = el('iframe', {
+            src: siteConfig.mapEmbedUrl,
+            class: 'contact__map-iframe',
+            loading: 'lazy',
+            referrerpolicy: 'no-referrer-when-downgrade',
+            title: `Ubicación de ${siteConfig.name} en Google Maps`,
+            'aria-label': `Mapa de ${siteConfig.address}`,
+            allowfullscreen: true,
+        });
+        const link = siteConfig.mapDirectionsUrl
+            ? el('a', {
+                class: 'contact__map-link',
+                href: siteConfig.mapDirectionsUrl,
+                target: '_blank',
+                rel: 'noopener noreferrer',
+            }, ['Cómo llegar →'])
+            : null;
+        map.appendChild(iframe);
+        if (link) map.appendChild(link);
+    }
 }
 
 /* Footer */
