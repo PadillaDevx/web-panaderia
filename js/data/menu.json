@@ -6,191 +6,102 @@
             "groups": [
                 {
                     "name": "Café de grano",
-                    "sizes": [
-                        "Chico",
-                        "Grande"
-                    ],
                     "items": [
-                        {
-                            "name": "Latte / Capuchino",
-                            "prices": [
-                                35,
-                                40
-                            ]
-                        },
-                        {
-                            "name": "Americano",
-                            "prices": [
-                                30,
-                                35
-                            ]
-                        },
-                        {
-                            "name": "Moka",
-                            "prices": [
-                                40,
-                                45
-                            ]
-                        }
+                        { "name": "Espresso", "price": 30 },
+                        { "name": "Espresso doble", "price": 45 },
+                        { "name": "Americano", "price": 45 },
+                        { "name": "Capuchino", "price": 65 },
+                        { "name": "Latte", "price": 60 },
+                        { "name": "Mocaccino", "price": 65 },
+                        { "name": "Chocolate caliente", "price": 55 },
+                        { "name": "Selección de tés", "price": 15 },
+                        { "name": "Café al gusto", "price": 20 },
+                        { "name": "Café de olla", "price": 15 }
                     ]
                 },
                 {
-                    "name": "Café de mi abuelita",
+                    "name": "Extras para café",
                     "note": "Con adición de:",
                     "items": [
-                        {
-                            "name": "Calúa",
-                            "price": 10,
-                            "addon": true
-                        },
-                        {
-                            "name": "Rompope",
-                            "price": 10,
-                            "addon": true
-                        }
+                        { "name": "Kalua", "price": 10, "addon": true },
+                        { "name": "Rompope", "price": 10, "addon": true },
+                        { "name": "Caramelo, chocolate blanco, menta, crema irlandesa, vainilla", "price": 5, "addon": true }
                     ]
                 }
             ]
         },
         {
-            "name": "Frapes",
+            "name": "Otras bebidas calientes",
             "layout": "two-column",
             "items": [
+                { "name": "Moka", "price": 55 },
+                { "name": "Capuchino", "price": 55 },
+                { "name": "Taro", "price": 60 },
+                { "name": "Café", "price": 50 },
+                { "name": "Fresa", "price": 50 },
+                { "name": "Mazapán", "price": 55 },
+                { "name": "Cajeta", "price": 60 },
+                { "name": "Galleta", "price": 55 },
+                { "name": "Chai (vainilla, especias)", "price": 70, "tag": "ESPECIAL" },
+                { "name": "Chocolate", "price": 60 },
+                { "name": "Matcha", "price": 70 },
+                { "name": "Xocolatl", "price": 65 },
+                { "name": "Chocolate abuelita", "price": 55 }
+            ]
+        },
+        {
+            "name": "Bebidas frías",
+            "layout": "double-group",
+            "groups": [
                 {
-                    "name": "Moka",
-                    "price": 45
+                    "name": "Café de grano",
+                    "items": [
+                        { "name": "Americano", "price": 45 },
+                        { "name": "Americano con leche", "price": 50 },
+                        { "name": "Capuchino", "price": 65 },
+                        { "name": "Latte", "price": 60 },
+                        { "name": "Mocaccino", "price": 65 },
+                        { "name": "Selección de tés", "price": 15 }
+                    ]
                 },
                 {
-                    "name": "Taro",
-                    "price": 45
-                },
-                {
-                    "name": "Fresa",
-                    "price": 45
-                },
-                {
-                    "name": "Capuchino",
-                    "price": 45
-                },
-                {
-                    "name": "Chai vainilla",
-                    "price": 55,
-                    "tag": "ESPECIAL"
-                },
-                {
-                    "name": "Chocolate",
-                    "price": 50
-                },
-                {
-                    "name": "Cajeta",
-                    "price": 45
-                },
-                {
-                    "name": "Café",
-                    "price": 45
-                },
-                {
-                    "name": "Mazapán",
-                    "price": 45
-                },
-                {
-                    "name": "Galleta",
-                    "price": 45
-                },
-                {
-                    "name": "Chai especias",
-                    "price": 55,
-                    "tag": "ESPECIAL"
-                },
-                {
-                    "name": "Matcha",
-                    "price": 50
+                    "name": "Smoothies",
+                    "items": [
+                        { "name": "Mango", "price": 55 },
+                        { "name": "Mora azul", "price": 65 },
+                        { "name": "Fresa", "price": 55 }
+                    ]
                 }
             ]
         },
         {
-            "name": "Bebidas endulzadas",
+            "name": "Frappés",
             "layout": "two-column",
-            "subtitle": "TODAS A $45 · CHOCOLATE ABUELITA $50",
             "items": [
-                {
-                    "name": "Chocolate abuelita",
-                    "price": 50
-                },
-                {
-                    "name": "Matcha",
-                    "price": 45
-                },
-                {
-                    "name": "Café",
-                    "price": 45
-                },
-                {
-                    "name": "Chocolate",
-                    "price": 45
-                },
-                {
-                    "name": "Galleta",
-                    "price": 45
-                },
-                {
-                    "name": "Chai especias",
-                    "price": 45
-                },
-                {
-                    "name": "Cajeta",
-                    "price": 45
-                },
-                {
-                    "name": "Moka",
-                    "price": 45
-                },
-                {
-                    "name": "Taro",
-                    "price": 45
-                },
-                {
-                    "name": "Fresa",
-                    "price": 45
-                },
-                {
-                    "name": "Capuchino",
-                    "price": 45
-                },
-                {
-                    "name": "Chai vainilla",
-                    "price": 45
-                },
-                {
-                    "name": "Mazapán",
-                    "price": 45
-                }
+                { "name": "Moka", "price": 55 },
+                { "name": "Capuchino", "price": 55 },
+                { "name": "Taro", "price": 60 },
+                { "name": "Café", "price": 50 },
+                { "name": "Fresa", "price": 50 },
+                { "name": "Mazapán", "price": 55 },
+                { "name": "Cajeta", "price": 60 },
+                { "name": "Galleta", "price": 55 },
+                { "name": "Chai (vainilla, especias)", "price": 70, "tag": "ESPECIAL" },
+                { "name": "Chocolate", "price": 60 },
+                { "name": "Matcha", "price": 70 },
+                { "name": "Xocolatl", "price": 65 },
+                { "name": "Chocolate abuelita", "price": 55 }
             ]
         },
         {
             "name": "Toppings",
             "layout": "single-column",
             "items": [
-                {
-                    "name": "Crema batida",
-                    "price": 10
-                },
-                {
-                    "name": "Lunetas",
-                    "price": 5
-                },
-                {
-                    "name": "Chispas de chocolate",
-                    "price": 3
-                },
-                {
-                    "name": "Sprinkles de colores",
-                    "price": 3
-                },
-                {
-                    "name": "Sprinkles de café",
-                    "price": 5
-                }
+                { "name": "Crema batida", "price": 10 },
+                { "name": "Lunetas", "price": 5 },
+                { "name": "Chispas de chocolate", "price": 3 },
+                { "name": "Sprinkles de colores", "price": 3 },
+                { "name": "Sprinkles de café", "price": 5 }
             ]
         }
     ]
