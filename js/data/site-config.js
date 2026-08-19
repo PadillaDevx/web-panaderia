@@ -16,11 +16,11 @@ export const siteConfig = {
         message: 'Hola, me gustaría hacer un pedido',
     },
 
-    address: 'Hermenegildo Galeana #38',
+    address: 'Hermenegildo Galeana #38, Encarnación de Díaz, Jalisco',
 
     /* ── Coordenadas y mapa (Google Maps embed) ── */
-    mapEmbedUrl: 'https://maps.google.com/maps?q=Hermenegildo+Galeana+%2338&output=embed',
-    mapDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Hermenegildo+Galeana+%2338',
+    mapEmbedUrl: 'https://maps.google.com/maps?q=Hermenegildo+Galeana+%2338%2C+Encarnaci%C3%B3n+de+D%C3%ADaz%2C+Jalisco&output=embed',
+    mapDirectionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Hermenegildo+Galeana+%2338%2C+Encarnaci%C3%B3n+de+D%C3%ADaz%2C+Jalisco',
 
     schedule: [
         { label: 'Lunes a Sábado', value: '7:00 am – 10:00 pm' },
