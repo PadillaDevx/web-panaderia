@@ -12,7 +12,7 @@ export const siteConfig = {
 
     /* ── Contacto (sin símbolos, en formato internacional) ── */
     whatsapp: {
-        phone: '5214751025717',
+        phone: '524751025717',
         message: 'Hola, me gustaría hacer un pedido',
     },
 
