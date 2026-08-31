@@ -55,6 +55,7 @@ export const siteConfig = {
         subtitle: 'Cada pieza horneada con amor, ingredientes frescos y las recetas que han pasado de generación en generación.',
         ctaPrimary: 'Ordenar por WhatsApp',
         ctaSecondary: { label: 'Ver nuestro trabajo', href: '#galeria' },
+        ctaMenu: { label: 'Ver nuestro menú', href: 'menu/' },
         collage: {
             center: { src: 'gallery/Foto 4.webp', alt: 'Galletas de chocolate con sprinkles', width: 600, height: 600 },
             satellites: [
@@ -98,6 +99,16 @@ export const siteConfig = {
     gallery: {
         eyebrow: 'Nuestra producción',
         title: ['El arte de', 'hornear'],
+    },
+
+    /* ── Contenido: Promo video (showcase dentro de la galería) ── */
+    promoVideo: {
+        eyebrow: 'Novedades',
+        title: 'Promo de la semana',
+        subtitle: 'Descubre nuestras nuevas creaciones horneadas — pan, dulce y pastelería recién salidos del horno.',
+        ctaLabel: 'Ver promoción',
+        src: 'gallery/WhatsApp Video 2026-08-27 at 22.59.13.mp4',
+        poster: 'gallery/Foto 4.webp',
     },
 
     /* ── Contenido: Sección Contacto ── */

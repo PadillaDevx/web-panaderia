@@ -7,6 +7,7 @@ import { featuredProducts } from '../data/featured-products.js';
 import { renderOrbit } from '../components/orbit.js';
 import { renderStrip } from '../components/strip.js';
 import { renderGallery } from '../components/gallery.js';
+import { renderPromo } from '../components/promo-video.js';
 import * as icons from '../utils/icons.js';
 
 /* Branding en el hero (reemplaza navbar) */
@@ -37,6 +38,11 @@ function renderHero() {
     const btnSec = $('[data-hero-cta-secondary]');
     btnSec.href = h.ctaSecondary.href;
     btnSec.textContent = h.ctaSecondary.label;
+
+    const btnMenu = $('[data-hero-cta-menu]');
+    btnMenu.href = h.ctaMenu.href;
+    btnMenu.querySelector('[data-icon]').innerHTML = icons.menu;
+    btnMenu.querySelector('[data-label]').textContent = h.ctaMenu.label;
 
     renderOrbit($('[data-hero-orbit]'), h.collage);
 }
@@ -181,6 +187,7 @@ function init() {
     renderBrand();
     renderHero();
     renderStrip($('[data-strip-track]'), siteConfig.strip);
+    renderPromo($('[data-promo]'), siteConfig.promoVideo);
     renderGallery($('[data-gallery]'), featuredProducts);
     $('[data-gallery-eyebrow]').textContent = siteConfig.gallery.eyebrow;
     $('[data-gallery-title]').innerHTML = titleWithEm(siteConfig.gallery.title, false);
