@@ -182,8 +182,38 @@ function renderFooter() {
     }
 }
 
+/* Opcional: sobreescribe las rutas de assets con las de gallery.json.
+   Si el archivo no existe o falla la lectura, se usan los valores por defecto. */
+async function applyGalleryConfig() {
+    try {
+        const res = await fetch('gallery.json');
+        if (!res.ok) return;
+        const g = await res.json();
+
+        if (g.logo) siteConfig.logo = g.logo;
+        if (g.nosotros) siteConfig.about.image.src = g.nosotros;
+        if (g.video) siteConfig.promoVideo.src = g.video;
+        if (g.videoPoster) siteConfig.promoVideo.poster = g.videoPoster;
+
+        if (g.hero?.center) siteConfig.hero.collage.center.src = g.hero.center;
+        if (Array.isArray(g.hero?.satellites)) {
+            g.hero.satellites.forEach((src, i) => {
+                const sat = siteConfig.hero.collage.satellites[i];
+                if (sat) sat.src = src;
+            });
+        }
+
+        if (Array.isArray(g.nuestraProduccion)) {
+            g.nuestraProduccion.forEach((src, i) => {
+                if (featuredProducts[i]) featuredProducts[i].image = src;
+            });
+        }
+    } catch { /* sin gallery.json: rutas por defecto */ }
+}
+
 /* Init */
-function init() {
+async function init() {
+    await applyGalleryConfig();
     renderBrand();
     renderHero();
     renderStrip($('[data-strip-track]'), siteConfig.strip);

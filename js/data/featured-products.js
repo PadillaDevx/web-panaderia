@@ -8,10 +8,10 @@
  */
 
 export const featuredProducts = [
-    { name: 'Muffins de Chocolate', type: 'Pan Dulce', image: 'gallery/Foto 9.webp', mods: ['tall'] },
-    { name: 'Pan Integral', type: 'Con Semillas', image: 'gallery/Foto 3.webp', mods: [] },
-    { name: 'Donas Glaseadas', type: 'Artesanal', image: 'gallery/Foto 13.webp', mods: [] },
-    { name: 'Galletas de Avena', type: 'Con Granola', image: 'gallery/Foto 6.webp', mods: ['wide'] },
-    { name: 'Roles de Azúcar', type: 'Pan Dulce', image: 'gallery/Foto 8.webp', mods: [] },
-    { name: 'Cuernitos', type: 'Hojaldrado', image: 'gallery/Foto 10.webp', mods: ['featured'] },
+    { name: 'Muffins de Chocolate', type: 'Pan Dulce', image: 'gallery/nuestra-produccion-01.webp', mods: ['tall'] },
+    { name: 'Pan Integral', type: 'Con Semillas', image: 'gallery/nuestra-produccion-02.webp', mods: [] },
+    { name: 'Donas Glaseadas', type: 'Artesanal', image: 'gallery/nuestra-produccion-03.webp', mods: [] },
+    { name: 'Galletas de Avena', type: 'Con Granola', image: 'gallery/nuestra-produccion-04.webp', mods: ['wide'] },
+    { name: 'Roles de Azúcar', type: 'Pan Dulce', image: 'gallery/nuestra-produccion-05.webp', mods: [] },
+    { name: 'Cuernitos', type: 'Hojaldrado', image: 'gallery/nuestra-produccion-06.webp', mods: ['featured'] },
 ];

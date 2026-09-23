@@ -8,7 +8,7 @@ export const siteConfig = {
     /* ── Identidad ── */
     name: 'Panadería José',
     foundedYear: 1985,
-    logo: 'gallery/Logo.png',
+    logo: 'gallery/logo.png',
 
     /* ── Contacto (sin símbolos, en formato internacional) ── */
     whatsapp: {
@@ -57,13 +57,13 @@ export const siteConfig = {
         ctaSecondary: { label: 'Ver nuestro trabajo', href: '#galeria' },
         ctaMenu: { label: 'Ver nuestro menú', href: 'menu/' },
         collage: {
-            center: { src: 'gallery/Foto 4.webp', alt: 'Galletas de chocolate con sprinkles', width: 600, height: 600 },
+            center: { src: 'gallery/hero-01.webp', alt: 'Galletas de chocolate con sprinkles', width: 600, height: 600 },
             satellites: [
-                { src: 'gallery/Foto 14.webp', alt: 'Concha de chocolate', width: 300, height: 300 },
-                { src: 'gallery/Foto 1.webp', alt: 'Conchas de fresa', width: 300, height: 300 },
-                { src: 'gallery/Foto 5.webp', alt: 'Orejas de hojaldre recién horneadas', width: 300, height: 300 },
-                { src: 'gallery/Foto 2.webp', alt: 'Trenzas de canela y azúcar', width: 300, height: 300 },
-                { src: 'gallery/Foto 7.webp', alt: 'Bolillos artesanales', width: 300, height: 300 },
+                { src: 'gallery/hero-02.webp', alt: 'Concha de chocolate', width: 300, height: 300 },
+                { src: 'gallery/hero-03.webp', alt: 'Conchas de fresa', width: 300, height: 300 },
+                { src: 'gallery/hero-04.webp', alt: 'Orejas de hojaldre recién horneadas', width: 300, height: 300 },
+                { src: 'gallery/hero-05.webp', alt: 'Trenzas de canela y azúcar', width: 300, height: 300 },
+                { src: 'gallery/hero-06.webp', alt: 'Bolillos artesanales', width: 300, height: 300 },
             ],
         },
     },
@@ -87,7 +87,7 @@ export const siteConfig = {
         quote: '"El pan no es sólo alimento, es el lenguaje universal de la hospitalidad."',
         text: 'Desde 1985, la familia José ha horneado con las mismas manos y el mismo corazón. Cada madrugada encendemos el horno para que tengas el pan más fresco en tu mesa.',
         signature: '— José Martínez, fundador',
-        image: { src: 'gallery/Panaderia.webp', alt: 'Interior de Panadería José con sus anaqueles llenos de pan', width: 900, height: 700 },
+        image: { src: 'gallery/nosotros-panaderia.webp', alt: 'Interior de Panadería José con sus anaqueles llenos de pan', width: 900, height: 700 },
         phrases: [
             'Más de tres décadas de tradición',
             'Horneado sin conservadores',
@@ -107,8 +107,8 @@ export const siteConfig = {
         title: 'Promo de la semana',
         subtitle: 'Descubre nuestras nuevas creaciones horneadas — pan, dulce y pastelería recién salidos del horno.',
         ctaLabel: 'Ver promoción',
-        src: 'gallery/WhatsApp Video 2026-08-27 at 22.59.13.mp4',
-        poster: 'gallery/Foto 4.webp',
+        src: 'gallery/video-promocion.mp4',
+        poster: 'gallery/hero-01.webp',
     },
 
     /* ── Contenido: Sección Contacto ── */

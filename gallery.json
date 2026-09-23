@@ -1,0 +1,24 @@
+{
+    "logo": "gallery/logo.png",
+    "hero": {
+        "center": "gallery/hero-01.webp",
+        "satellites": [
+            "gallery/hero-02.webp",
+            "gallery/hero-03.webp",
+            "gallery/hero-04.webp",
+            "gallery/hero-05.webp",
+            "gallery/hero-06.webp"
+        ]
+    },
+    "nuestraProduccion": [
+        "gallery/nuestra-produccion-01.webp",
+        "gallery/nuestra-produccion-02.webp",
+        "gallery/nuestra-produccion-03.webp",
+        "gallery/nuestra-produccion-04.webp",
+        "gallery/nuestra-produccion-05.webp",
+        "gallery/nuestra-produccion-06.webp"
+    ],
+    "nosotros": "gallery/nosotros-panaderia.webp",
+    "video": "gallery/video-promocion.mp4",
+    "videoPoster": "gallery/hero-01.webp"
+}
