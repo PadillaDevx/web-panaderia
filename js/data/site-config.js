@@ -24,7 +24,7 @@ export const siteConfig = {
 
     schedule: [
         { label: 'Lunes a Sábado', value: '7:00 am – 10:00 pm' },
-        { label: 'Domingos',       value: '10:00 am – 10:00 pm' },
+        { label: 'Domingos', value: '10:00 am – 10:00 pm' },
     ],
 
     /* ── Rutas internas ── */
@@ -85,7 +85,7 @@ export const siteConfig = {
         eyebrow: 'Nuestra historia',
         title: ['Tradición que', 'sabe a hogar'],
         quote: '"El pan no es sólo alimento, es el lenguaje universal de la hospitalidad."',
-        text: 'Desde 2020, la familia José ha horneado con las mismas manos y el mismo corazón. Cada madrugada encendemos el horno para que tengas el pan más fresco en tu mesa.',
+        text: 'Desde 2020, José ha horneado con las mismas manos y el mismo corazón. Cada madrugada encendemos el horno para que tengas el pan más fresco en tu mesa.',
         signature: '— José Alberto Romo Huerta, fundador',
         image: { src: 'gallery/nosotros-panaderia.webp', alt: 'Interior de Panadería José con sus anaqueles llenos de pan', width: 900, height: 700 },
         phrases: [
