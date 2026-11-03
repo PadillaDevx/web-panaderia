@@ -3,7 +3,7 @@
  *
  * El video se reproduce silenciado en loop dentro del banner (sin controles),
  * dando movimiento al bloque. Al hacer clic se abre un modal con el video
- * completo, controles nativos, cierre por botón / click-fuera / tecla Esc.
+ * completo (silenciado por defecto), controles nativos, cierre por botón / click-fuera / tecla Esc.
  */
 
 import { el, clear } from '../utils/dom.js';
@@ -21,6 +21,7 @@ function buildModal(video) {
     const player = el('video', {
         class: 'modal__video',
         controls: true,
+        muted: true,
         autoplay: true,
         playsinline: true,
     }, [
