@@ -89,7 +89,7 @@ export const siteConfig = {
         signature: '— José Alberto Romo Huerta, fundador',
         image: { src: 'gallery/nosotros-panaderia.webp', alt: 'Interior de Panadería José con sus anaqueles llenos de pan', width: 900, height: 700 },
         phrases: [
-            'Más de tres décadas de tradición',
+            'Siempre con dedicación',
             'Horneado sin conservadores',
             'Familia, no fábrica',
         ],
